@@ -11,4 +11,7 @@ scoop install javelin/<app>
 
 ## Manifest
 
-暂无 manifest，后续按需添加。
+- foundation-sunshine
+- IKUN-Music
+- openlist-desktop
+- pixcall
