@@ -14,5 +14,4 @@ scoop install javelin/<app>
 - foundation-sunshine
 - IKUN-Music
 - openlist-desktop
-- pixcall
 - Serpent
