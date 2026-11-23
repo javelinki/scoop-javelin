@@ -15,3 +15,4 @@ scoop install javelin/<app>
 - IKUN-Music
 - openlist-desktop
 - Serpent
+- creatorhub
