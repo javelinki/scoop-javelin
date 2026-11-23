@@ -22,7 +22,8 @@
             "64bit": {
                 "url": "https://github.com/dolag233/Serpent/releases/download/v$version/Serpent-win-x86-64-$version-portable.zip",
                 "hash": {
-                    "url": "https://github.com/dolag233/Serpent/releases/download/v$version/Serpent-win-x86-64-$version-portable.zip.sha256"
+                    "url": "https://github.com/dolag233/Serpent/releases/download/v$version/Serpent-win-x86-64-$version-portable.zip.sha256",
+                    "regex": "$sha256"
                 }
             }
         }
