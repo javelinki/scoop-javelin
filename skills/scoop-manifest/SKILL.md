@@ -48,7 +48,7 @@ description: 'Use when creating or reviewing Scoop bucket manifests. Covers opti
 ## 配置/数据持久化（Scoop 原生 persist）
 
 ### 目标
-- 把软件把数据写到安装目录下的文件/文件夹持久化到 Scoop 的 persist 目录，升级/重装不丢数据。
+- 把软件安装目录内的数据文件/文件夹持久化到 Scoop 的 persist 目录，升级/重装不丢数据。
 - Scoop 原生支持 `persist` 字段，自动建立 junction/hardlink，**无需自定义脚本**。
 
 ### 用法
@@ -63,11 +63,15 @@ description: 'Use when creating or reviewing Scoop bucket manifests. Covers opti
 - 数组：`[source, target]`，可把安装目录下的 `source` 映射到 persist 目录下的 `target`。
 - `persist` 中的路径相对于安装目录 `$dir`。
 
+### 官方推荐的软件数据目录处理
+1. **优先使用软件原生 portable 目录**（如 lx-music 的 `portable/`）：post_install 创建该目录，`persist` 指向它。
+2. **其次使用软件支持的命令行参数**（如 `--user-data-dir="$dir\data"`）：在 `bin`/`shortcuts` 的 args 中指定 `$persist_dir`，并 `persist` 对应目录。
+3. **最后才考虑 AppData junction**：官方 Scoop 维护者建议避免在 manifest 中修改 Scoop 根目录外的文件；junction 方案仅在软件不支持上述两种方式时使用，且需谨慎清理。
+
 ### 注意事项
 - `persist` 只持久化安装目录内的路径；软件写到 `%APPDATA%`/`%LOCALAPPDATA%` 的数据不会被 Scoop 自动持久化。
-- 若软件支持 `--user-data-dir`/`--config` 等参数，优先用 `bin`/`shortcuts` 的 args 指定 `$persist_dir`，比 junction 更干净。
 - 卸载时 Scoop 会自动 `unlink_persist_data`，无需 `pre_uninstall` 手动清理（除非用了 junction helper）。
-- 若必须重定向 AppData，才考虑 `post_install` junction helper，但这不是 Scoop 原生方式，维护成本高。
+- 若软件支持 portable 目录，post_install 只需创建目录，`persist` 指向它即可。
 
 ## 验证命令
 ```powershell
@@ -78,5 +82,6 @@ powershell -ExecutionPolicy Bypass -File .\bin\test.ps1
 
 ## 参考
 - Scoop 官方模板：`bucket/app-name.json.template`
-- 本仓库 manifest 示例：`bucket/Serpent.json`、`bucket/IKUN-Music.json`
+- 本仓库 manifest 示例：`bucket/Serpent.json`、`bucket/IKUN-Music.json`、`bucket/openlist-desktop.json`
 - Scoop 源码：`lib/install.ps1`（persist_data / unlink_persist_data）
+- Scoop Wiki：Persistent data
