@@ -6,10 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/3441293738/creatorhub/releases/download/v0.3.2/CreatorHub-Setup-0.3.2-windows-x64.exe",
-            "hash": {
-                "url": "https://github.com/3441293738/creatorhub/releases/download/v0.3.2/SHA256.txt",
-                "find": "$sha256"
-            }
+            "hash": "6dc10a03969346e1e92d453bc3144f22415ff2e8d3c55c177af2665e33bc0a52"
         }
     },
     "innosetup": true,
