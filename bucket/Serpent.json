@@ -1,7 +1,7 @@
 {
     "version": "0.3.8",
     "description": "An open-source, cross-platform digital asset manager for artists and designers, with AI search.",
-    "homepage": "https://serpent.dolag.work",
+    "homepage": "https://github.com/dolag233/Serpent",
     "license": "MIT",
     "notes": "Windows builds are unsigned; SmartScreen may warn on first run (More info -> Run anyway).",
     "architecture": {
