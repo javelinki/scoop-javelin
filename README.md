@@ -1,21 +1,14 @@
-# Scoop Bucket: javelin
+# scoop-javelin
 
-[![Tests](https://github.com/javelinki/scoop-javelin/actions/workflows/ci.yml/badge.svg)](https://github.com/javelinki/scoop-javelin/actions/workflows/ci.yml) [![Excavator](https://github.com/javelinki/scoop-javelin/actions/workflows/excavator.yml/badge.svg)](https://github.com/javelinki/scoop-javelin/actions/workflows/excavator.yml)
+自用 [Scoop](https://scoop.sh) bucket，收集个人常用的 Windows 软件 manifest。
 
-Bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
-
-## How do I install this bucket?
-
-After manifests have been committed and pushed, run the following:
+## 使用
 
 ```pwsh
 scoop bucket add javelin https://github.com/javelinki/scoop-javelin
 scoop install javelin/<app>
 ```
 
-## How do I contribute new manifests?
+## Manifest
 
-To make a new manifest contribution, please read the [Contributing
-Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
-and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
-wiki page.
+暂无 manifest，后续按需添加。
