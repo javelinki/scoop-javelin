@@ -1,12 +1,12 @@
 {
-    "version": "0.5.0",
+    "version": "0.6.0",
     "description": "多平台内容监控·采集·搬运 Web 面板，支持抖音/小红书/快手/视频号/TikTok/哔哩哔哩/Instagram/Rednote。",
     "homepage": "https://github.com/3441293738/creatorhub",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/3441293738/creatorhub/releases/download/v0.5.0/CreatorHub-Setup-0.5.0-windows-x64.exe",
-            "hash": "4eb44328a2bdb26d66885c35aaa5696e1d39e94994865928096ab9e4fe10b1d8"
+            "url": "https://github.com/3441293738/creatorhub/releases/download/v0.6.0/CreatorHub-Setup-0.6.0-windows-x64.exe",
+            "hash": "641f47dee61fcb6c62ac5d6a01bedef5bac9d25e2ea719b9abc64767dca514ac"
         }
     },
     "innosetup": true,
